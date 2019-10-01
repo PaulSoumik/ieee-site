@@ -1,0 +1,1370 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+   <meta charset="utf-8">
+    <title>IEEE_NIT_Dgp</title>
+    <meta name="description" content="">
+    <meta name="IEEE-sb" content="">
+
+    <!-- mobile specific metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+
+<link href="https://fonts.googleapis.com/css?family=Arvo|Inconsolata|Merriweather+Sans|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style type="text/css">
+      *{
+        
+        box-sizing: border-box;
+        
+      }
+  body{
+    overflow-x: hidden;
+  }
+     /*light theme*/
+          body.light_body::-webkit-scrollbar {
+  background: #565676;
+  opacity: 0.6; 
+  width: 20px;
+}
+
+/* Handle */
+body.light_body::-webkit-scrollbar-thumb {
+  background: #d9d9d9; 
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+body.light_body::-webkit-scrollbar-thumb:hover {
+  background: #efefef; 
+}
+
+
+
+      /*dark theme*/
+      body.dark_body::-webkit-scrollbar {
+  background: rgba(30,80,140,0.5);
+  opacity: 0.6; 
+  width: 20px;
+}
+
+/* Handle */
+body.dark_body::-webkit-scrollbar-thumb {
+  background: #dadadf; 
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+body.dark_body::-webkit-scrollbar-thumb:hover {
+  background: #eaeaef; 
+}
+
+
+
+      html,body{
+        margin: 0;
+        padding: 0;
+      }
+      section{
+        width: 95vw;
+        overflow-x: hidden;
+        box-sizing: border-box;
+      }
+       *::before,*::after{
+          box-sizing: border-box;
+        }
+
+        main{
+          width: 100%;
+          overflow-x: hidden;
+          margin: 0 auto;
+        }
+        
+
+
+      
+
+
+        .light_main_back::before{
+         
+          background-color: #fff;
+                  }
+           .light_main_back::after{
+          
+          background-color: rgba(0,0,50,0.5);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        .dark_main_back::before{
+           background-color: #000;
+        }
+           .dark_main_back::after{
+        background-color: rgba(0,0,50,0.5);
+        border-color: #F0404e;
+        }
+
+
+
+
+
+
+       
+
+input.login:hover{
+ background-color: rgba(255,255,255,0.4);
+}
+
+
+
+
+/*slider*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*header*/
+header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  color: #fff;
+  z-index: 22222;
+  font-family: 'Merriweather Sans', sans-serif;
+  letter-spacing: 2px;
+}
+header img{
+ 
+}
+header ul{
+list-style: none;
+position: fixed;
+width: 80%;
+right: 0;
+padding: 10px;
+cursor: pointer;
+z-index: 22222;
+text-decoration: none;
+color: #fff;
+background-color: rgba(0,0,0,0.6);
+
+
+}
+header ul li{
+  display: inline-block;
+  margin: 2px;
+  cursor: pointer;
+  /*background-color: rgba(0,0,0,0.3);*/
+  border-radius: 25px;
+  padding: 12px;
+
+
+}
+
+header ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+header ul li:hover a{
+  text-decoration: none;
+  color: #fff;
+}
+header ul li:hover{
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.9);
+}
+header ul li ul li{
+  display: block;
+  transform: scale(0);
+  margin-top: -50px;
+  opacity: 0;
+  transition: all 0.4s;
+  list-style: none;
+
+}
+header ul li:hover>ul li{
+  transform: scale(1);
+  margin-top: 25px;
+  opacity: 1;
+  
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*side bar*/
+
+
+
+
+section span{
+  color: #f24;
+  text-decoration: none;
+}
+
+
+
+
+
+.light_body .reg-container{
+  margin-top:15vh;
+  max-width: 90vw;
+  background-color: rgba(47, 109, 155,0.9);
+  padding: 50px;
+}
+
+
+.light_body .reg-container .jumbotron{
+  
+  background-color: rgba(117, 209, 255,0);
+}
+.dark_body .reg-container{
+   margin-top:15vh;
+  max-width: 90vw;
+  background-color: rgba(46, 25, 155,0.8);
+  padding: 50px;
+}
+.dark_body .reg-container .jumbotron{
+  background-color: rgba(136, 85, 255,0);
+}
+
+
+.reg-container .jumbotron h1{
+  color: #fff;
+}
+.reg-container .jumbotron p span.helptext{
+ color: #fff;
+}
+
+.reg-container .jumbotron h3{
+ color: #fff;
+}
+.reg-container .jumbotron label{
+  display: block;
+  color: #fff;
+}
+.reg-container .jumbotron input{
+  display: block;
+  transition: all 0.5s ease-in-out;
+  color: #000;
+}
+.reg-container .jumbotron input:focus{
+  border-radius: 5px;
+}
+input.regis-sub{
+  background-color: rgba(200,200,200,0.5);
+  border: 1px solid #fff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 700;
+
+}
+input.regis-sub:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:880px) {
+
+  section {
+    
+    margin: 0 auto;
+
+  }
+  main{
+     margin: 0 auto;
+     padding: 0;
+     box-sizing: border-box;
+  }
+  
+
+header{
+  width: 100vw;
+}
+
+header ul{
+background-color: rgba(0,0,0,0.2);
+
+}
+header ul li{
+ font-size: 9px;
+ float: right;
+}
+
+header img{
+  width: 90px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+
+.reg-container input{
+  width: 55vw;
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:1280px) and (min-width:900px){
+
+
+
+
+ .background_main img{
+  height: 100%;
+ }
+
+
+
+section.about_ieee h4{
+
+  font-size: 17px;
+  
+
+}
+section.about_ieee p{
+  
+  font-size: 12px;
+  word-spacing: 0.7em;
+  
+
+}
+
+}
+
+    </style>
+
+</head>
+<body class="light_body">
+<header>
+  <img src="/media/images/ieeesb_logo.svg">
+  <ul>
+      
+          <li><a href="{% url 'index' %}">Home</a></li>
+           <li>Blog</li>
+
+            <li id="notify">Notifications</li>
+          
+          <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a class="navbar-link" href="{% url 'thereg:register' %}">Register</a></li>     
+          {# Some logic on what to display for last item#}
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li><a class="navbar-link" href="{% url 'thereg:user_login' %}">Login</a></li>
+          {% endif %}
+    </ul>
+</header>
+
+
+
+ <div class="container">
+    {% block body_block %}
+    {% endblock %}
+    </div>
+
+
+<div id="top" style="position: fixed; z-index: 99999;cursor: pointer;bottom: 50px; right:20px;transform: rotate(-90deg) scale(0); padding:5px 10px; background-color: rgba(100,100,100,0.6);border-radius: 5px ;font-size: 30px; color: #fff; font-family: monospace; text-align: center; transition: all 0.4s;">></div>
+
+<div class="switch_container" style="position: fixed; z-index: 99999;cursor: pointer;bottom: 50px; left:60px; background-color: rgba(100,100,100,1);border-radius: 5px ;font-size: 12px; color: #fff; font-family: monospace; display: grid; grid-template-columns: 1fr 1fr;">
+  <div id="dark" style="display: block; width: 30px; text-align: center;">o</div>
+<div id="light" style="display: block; width: 30px; background-color: #27f; text-align: center;"></div>
+</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function ($){
+
+    $(".scroll_tag").click(function(){
+      
+      var offsetHeight = document.getElementById('home').offsetHeight; 
+      window.scroll(0, offsetHeight*1.15);
+      
+    })
+  })
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  
+
+    $("#top").click(function(){
+    window.scroll(0, 0);
+    });
+    
+    
+  
+</script>
+
+
+
+
+
+
+<!--dark/light theme animation-->
+<script type="text/javascript">
+  
+
+    $("#dark").click(function(){
+
+      $("body").css("background-color", "#000");
+      
+      
+      $("section.about_ieee #about_division").css("background-color", "#222");
+      $("section.about_ieee #about_division .about_content_half").css("color", "#fff");
+      $(".join_ieee").css("color", "#fff");
+      $(".events_ieee").css("color", "#fff");
+           $("#dark").css("background-color", " #27f");
+     document.getElementById("dark").innerHTML="";
+     document.getElementById("light").innerHTML="o";
+     $("#light").css("background-color", "rgba(100,100,100,1)");
+   
+         $(".background_main").addClass("dark_main_back").removeClass("light_main_back");
+         $("body").removeClass("light_body").addClass("dark_body");
+
+    });
+  
+    
+    
+  
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  
+
+    $("#light").click(function(){
+      $("body").css("background-color", "");
+      $(".background_main::after").css("background-color", "");
+      $(".background_main::before").css("background-color", "");
+      $("section.about_ieee #about_division").css("background-color", "");
+      $("section.about_ieee #about_division .about_content_half").css("color", "");
+      $(".join_ieee").css("color", "");
+      $(".events_ieee").css("color", "");
+       $("#light").css("background-color", " #27f");
+     document.getElementById("dark").innerHTML="o";
+     document.getElementById("light").innerHTML="";
+     $("#dark").css("background-color", "rgba(100,100,100,1)");
+      $(".background_main").removeClass("dark_main_back").addClass("light_main_back");
+             $("body").removeClass("dark_body").addClass("light_body");
+      
+     
+    });
+  
+    
+    
+  
+</script>
+
+<!--end theme-->
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+      $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        if(scrollTop>50){
+          $("#top").css("transform", " rotate(-90deg) scale(1)")
+        }
+        else{
+          $("#top").css("transform", " rotate(-90deg) scale(0)")}
+      })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--scrollanimation-->
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function ($){
+
+    $(window).scroll(function(){
+      
+      var offsetHeight_1 = document.getElementById('home').offsetHeight; 
+      var offsetHeight_2 = document.getElementById('about').offsetHeight;
+      var offsetHeight_3 = document.getElementById('commu').offsetHeight; 
+      var offsetHeight_4 = document.getElementById('our-team-mem').offsetHeight; 
+      var offsetHeight_5 = document.getElementById('members').offsetHeight;
+      var offsetHeight_6 = document.getElementById('joinieee').offsetHeight;
+      var scrollTop = $(window).scrollTop();
+      
+
+             /* about*/
+
+      if(scrollTop > offsetHeight_1-210){
+        $(".about_image_half").css("transform" , "scale(1)");
+        $(".about_content_half").css("transform" , "translateY(0)").css("opacity" , "1");
+        
+      }
+      else {
+        $(".about_image_half").css("transform" , "scale(0)");
+        $(".about_content_half").css("transform" , "translateY(200vh)").css("opacity" , "0");
+       
+      }
+    
+   /*-webkit-box-shadow: 23px 3px 7px -14px rgba(85,85,85,0.35);
+-moz-box-shadow: 23px 3px 7px -14px rgba(85,85,85,0.35);
+box-shadow: 23px 3px 7px -14px rgba(85,85,85,0.35);*/
+            
+           /*commu*/
+
+       var commu_Height = offsetHeight_1 + offsetHeight_2 ;
+
+          if(scrollTop > commu_Height-100){
+        $(".grid_commu_items").css("transform" , "translateY(0)").css("opacity" , "1");
+      }
+      else {
+        $(".grid_commu_items").css("transform" , "translateY(200vh)").css("opacity" , "0");
+      }
+             
+            var BGheight = scrollTop - commu_Height;
+            if (window.matchMedia("(min-width: 800px)").matches){
+            if(BGheight>10){
+            $("section.communities_ieee").css("background-position" , "50% "+ (BGheight-50 )+"px");}
+            else{
+              $("section.communities_ieee").css("background-position" , "50% "+50+"%");
+            }
+        }
+            else{
+               if(BGheight>4){
+            $("section.communities_ieee").css("background-position" , "0 "+ BGheight+"px");}
+            else{
+              $("section.communities_ieee").css("background-position" , "");
+            }
+            }
+/*(0+(BGheight*100*3/offsetHeight_3))*/
+
+
+
+
+            if(scrollTop>89){
+            $(".background_main img").css("filter" ,"blur( 9px )");
+            $(".content_main_container").css("margin-left" ,-140+"vw").css("opacity",0.7);
+           
+        }
+            else{
+              $(".background_main img").css("filter" ,"blur( 4px )");
+              $(".content_main_container").css("margin-left" ,0+"px").css("opacity",1);
+              
+            }
+
+
+            if(scrollTop>commu_Height-250){
+              $(".side_bar ul li a").removeClass("active_side_bar");
+              $(".side_bar_commu a").addClass("active_side_bar");
+            }
+
+            var members_heigt = offsetHeight_1 + offsetHeight_2 + offsetHeight_3 ;
+            var team_heigt = offsetHeight_1 + offsetHeight_2 + offsetHeight_3 + offsetHeight_4 ;
+            var join_height = offsetHeight_1 + offsetHeight_2 + offsetHeight_3 + offsetHeight_4 + offsetHeight_5 ;
+            var contact_height = offsetHeight_1 + offsetHeight_2 + offsetHeight_3 + offsetHeight_4 + offsetHeight_5 + offsetHeight_6 ;
+
+              if(scrollTop>members_heigt-250){
+              $(".side_bar ul li a").removeClass("active_side_bar");
+              $(".side_bar_events a").addClass("active_side_bar");
+            }
+              if(scrollTop>team_heigt-300){
+              $(".side_bar ul li a").removeClass("active_side_bar");
+              $(".side_bar_members a").addClass("active_side_bar");
+            }
+              if(scrollTop>join_height-250){
+              $(".side_bar ul li a").removeClass("active_side_bar");
+              $(".side_bar_join a").addClass("active_side_bar");
+            }
+             if(scrollTop>contact_height-250){
+              $(".side_bar ul li a").removeClass("active_side_bar");
+              $(".side_bar_contacts a").addClass("active_side_bar");
+            }
+             else if(scrollTop<commu_Height-250){
+             $(".side_bar ul li a").removeClass("active_side_bar");
+              $(".side_bar_about a").addClass("active_side_bar"); 
+             }
+      
+    })
+    
+  })
+
+       
+
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  (function() {
+  "use strict";
+  var //GLOBAL VARIABLES
+  input,
+      container,
+      //CSS CLASSES
+      classSuccess = "success",
+      classError = "error",
+      //FORM VALIDATOR
+      formValidator = {
+        init: function() {
+          this.cacheDom();
+          this.bindEvents();
+        },
+        cacheDom: function() {
+          //MAIN PARENT ELEMENT
+          this.contactForm = document.getElementById("contactForm");
+          //MAIN FORM ELEMENTS
+          this.formHeader = document.querySelector("#formHeader h1");
+          this.formBody = document.getElementById("formBody");
+          this.inputContainer = document.getElementsByClassName("inputContainer");
+          //USER INPUT ELEMENTS
+          //INPUT FIELDS
+          this.fields = {
+            userName: document.getElementById("userName"),
+            userEmail: document.getElementById("userEmail"),
+            userMessage: document.getElementById("userMessage")
+          };
+          this.submitBtn = document.getElementById("submitBtn");
+        },
+        bindEvents: function() {
+          var i;
+          //RUN RULES ON SUBMIT BUTTON CLICK
+          this.submitBtn.onclick = this.runRules.bind(this);
+          //BIND EVENTS TO EACH INPUT FIELD
+          for (i in this.fields) {
+            if (this.fields.hasOwnProperty(i)) {
+              //VARIABLES
+              input = this.fields[i];
+              container = input.parentElement;
+              //RUN RULES WHEN INPUT HAS FOCUS
+              input.onfocus = this.runRules.bind(this);
+              //RESET ERRORS WHEN CONTAINER IS CLICKED
+              container.onclick = this.resetErrors.bind(this, input);
+            }
+          }
+        },
+        runRules: function(evnt) {
+          var target = evnt.target,
+              type = evnt.type;
+          //IF EVENT ON SUBMIT BUTTON
+          if (target === this.submitBtn) {
+            //PREVENT FORM SUBMITTION
+            this.preventDefault(evnt);
+            //IF INPUT HAS FOCUS
+          } else if (type === "focus") {
+            //RESET CLASSLIST
+            this.resetClassList(target.parentElement);
+            //RESET ERRORS
+            this.resetErrors(target);
+            return false;
+          }
+          //RESET CLASSLIST
+          this.resetClassList();
+          //CHECK FIELDS
+          this.checkFields();
+        },
+        preventDefault: function(evnt) {
+          //PREVENT DEFUALT
+          evnt.preventDefault();
+        },
+        checkFields: function() {
+          var i,
+              validCount = 0,
+              //EMAIL FILTER 
+              filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          //CYLCE THROUGH INPUTS
+          for (i in this.fields) {
+            if (this.fields.hasOwnProperty(i)) {
+              input = this.fields[i];
+              //CHECK IF FIELD IS EMPTY
+              if (input.value === "") {
+                //ADD ERROR CLASS
+                this.addClass(input, classError);
+                //CHECK IF EMAIL IS VALID
+              } else if (i === "userEmail" && !filter.test(input.value)) {
+                //ADD ERROR CLASS
+                this.addClass(input, classError);
+              } else {
+                //FIELD IS VALID
+                this.addClass(input, classSuccess);
+                validCount += 1;
+              }
+            }
+          }
+          //IF ALL FEILDS ARE VALID
+          if (validCount === 3) {
+            //SUBMIT FORM
+            this.submitForm();
+          }
+        },
+        addClass: function(input, clss) {
+          container = input.parentElement;
+          //IF INPUT HAS ERROR
+          if (clss === classError) {
+            //SHOW ERROR MESSAGE
+            this.errorMessage(input);
+          }
+          //ADD CLASS
+          input.parentElement.classList.add(clss);
+        },
+        errorMessage: function(input) {
+          var message;
+          //IF USERNAME HAS ERROR
+          if (input === this.fields.userName) {
+            message = "Please enter your name";
+            //ELSE IF USEREMAIL HAS ERROR 
+          } else if (input === this.fields.userEmail) {
+            message = "Please enter a valid email";
+            //ELSE IF USERMESSAGE HAS ERROR
+          } else if (input === this.fields.userMessage) {
+            message = "Please enter your feedback";
+          }
+          this.renderError(input, message);
+        },
+        renderError: function(input, message) {
+          var html;
+          //GET INPUT CONTAINER
+          container = input.parentElement;
+          //RENDER HTML
+          html = document.createElement("div");
+          html.setAttribute("class", "message");
+          html.innerHTML = message;
+          //IF MESSAGE ELEMENT DOESN'T EXIST
+          if (!container.getElementsByClassName("message")[0]) {
+            //INSERT MESSAGE TO INPUT CONTAINER
+            container.insertBefore(html, container.firstElementChild);
+          }
+        },
+        resetClassList: function(input) {
+          var i;
+          //IF TARGETING SPECIFIC INPUT
+          if (input) {
+            //GET INPUT CONTAINER
+            container = input.parentElement;
+            //REMOVE CLASSES
+            container.classList.remove(classError, classSuccess);
+            //FOCUS ON INPUT FIELD
+            input.focus();
+          } else {
+            for (i in this.fields) {
+              if (this.fields.hasOwnProperty(i)) {
+                //REMOVE CLASSES FROM ALL FIELDS
+                this.fields[i].parentElement.classList.remove(classError, classSuccess);
+              }
+            }
+          }
+        },
+        resetErrors: function(input) {
+          //GET INPUT CONTAINER
+          container = input.parentElement;
+          //IF CONTAINER CONTAINS ERROR
+          if (container.classList.contains(classError)) {
+            //RESET CLASSES
+            this.resetClassList(input);
+          }
+        },
+        submitForm: function() {
+          var waitForAnimation;
+          //ADD SUCCESS CLASS
+          this.contactForm.classList.add(classSuccess);
+          //WAIT FOR ANIMATION TO FINISH
+          this.changeHeader("Sent Succesfully");
+          //WAIT FOR ANIMATION TO FINISH
+          setTimeout(this.changeHeader.bind(this, "Thank you for your feedback"), 1200);
+        },
+        changeHeader: function(text) {
+          //CHANGE HEADER TEXT
+          this.formHeader.innerHTML = text;
+        }
+      };
+  //INITIATE FORM VALIDATOR
+  formValidator.init();
+}());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+      function ErrorPage(e,t,n){this.$container=$(e),this.$contentContainer=this.$container.find(n=="sign"?".sign-container":".content-container"),this.pageType=t,this.templateName=n}ErrorPage.prototype.centerContent=function(){var e=this.$container.outerHeight(),t=this.$contentContainer.outerHeight(),n=(e-t)/2,r=this.templateName=="sign"?-100:0;this.$contentContainer.css("top",n+r)},ErrorPage.prototype.initialize=function(){var e=this;this.centerContent(),this.$container.on("resize",function(t){t.preventDefault(),t.stopPropagation(),e.centerContent()}),this.templateName=="plain"&&window.setTimeout(function(){e.$contentContainer.addClass("in")},500),this.templateName=="sign"&&$(".sign-container").animate({textIndent:0},{step:function(e){$(this).css({transform:"rotate("+e+"deg)","transform-origin":"top center"})},duration:1e3,easing:"easeOutBounce"})},ErrorPage.prototype.createTimeRangeTag=function(e,t){return"<time utime="+e+' simple_format="MMM DD, YYYY HH:mm">'+e+"</time> - <time utime="+t+' simple_format="MMM DD, YYYY HH:mm">'+t+"</time>."},ErrorPage.prototype.handleStatusFetchSuccess=function(e,t){if(e=="503")$("#replace-with-fetched-data").html(t.status.description);else if(!t.scheduled_maintenances.length)$("#replace-with-fetched-data").html("<em>(there are no active scheduled maintenances)</em>");else{var n=t.scheduled_maintenances[0];$("#replace-with-fetched-data").html(this.createTimeRangeTag(n.scheduled_for,n.scheduled_until)),$.fn.localizeTime()}},ErrorPage.prototype.handleStatusFetchFail=function(e){$("#replace-with-fetched-data").html("<em>(enter a valid StatusPage.io url)</em>")},ErrorPage.prototype.fetchStatus=function(e,t){if(!e||!t||t=="404")return;var n="",r=this;t=="503"?n=e+"/api/v2/status.json":n=e+"/api/v2/scheduled-maintenances/active.json",$.ajax({type:"GET",url:n}).success(function(e,n){r.handleStatusFetchSuccess(t,e)}).fail(function(e,n){r.handleStatusFetchFail(t)})};
+      var ep = new ErrorPage('body', "503", "plain");
+      ep.initialize();
+      // hack to make sure content stays centered >_<
+      $(window).on('resize', function() {
+        $('body').trigger('resize')
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--slider events-->
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($){
+     var x=0;
+    
+    
+
+  $( ".slides" ).hover(
+  function() {
+    $(".slides").removeAttr("id","slider");
+    $(".slides .ul").css("left",leftPos);
+  }, function() {
+   $(".slides").attr("id","slider");
+  }
+);
+  setInterval(function () {
+        moveRight();
+    }, 5000);
+  // setInterval(function () {
+     //   moveRight();
+  //  }, 5000);
+  var slideCount = $('#slider ul li').length;
+  var slideWidth = $('#slider ul li').width();
+  var slideHeight = $('#slider ul li').height();
+  var sliderUlWidth = slideCount * slideWidth;
+  var leftPos =0;
+  $('#slider').css({ width: slideWidth, height: slideHeight });
+  
+  $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+  
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 500, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+        leftPos = leftPos+slideWidth;
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 500, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+        leftPos = leftPos-slideWidth;
+    };
+     function pause() {
+        $('#slider ul').animate({
+            left: leftPos
+        }, 500);
+        
+    };
+      
+    });
+  </script>
+
+
+
+
+  
+
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function ($){
+     var x=0;
+    
+    
+
+
+  var containerwidth = $('.wrapper-it .container').width();
+  var sectionWidth = $('.our-team-mem').width();
+  var boxWidth = $('.wrapper-it .container .col-md-4').width();
+  var mainWidth = $('main').width();
+  var containerHeight = $('.wrapper-it .container').height();
+  var wrapperWidth = 2 * containerwidth;
+  var leftPos =0;
+  var thewrapper = wrapperWidth;
+  boxWidth=boxWidth+40;
+  var totalWidth = boxWidth*10;
+var left =0;
+var count =0;
+var num = 0;
+var f=7;
+if(window.matchMedia('(max-width: 700px)').matches){
+  boxWidth = boxWidth -40;
+  f=9;
+}
+else if(window.matchMedia('(max-width: 820px)').matches){
+  f=7;
+}
+else if(window.matchMedia('(max-width: 1030px)').matches){
+f=6;
+}
+
+
+setInterval(function () {
+  
+  if(count<f){
+      next_man();
+      
+      }
+  else if(count>=f){
+    
+        $('.wrapper-it .container').animate({
+    'marginLeft': '0px'
+  },1500);
+        count =0;
+  $("#prev").css("display","none");
+  $("#next").css("display","block");
+      
+      }
+     else if($(".our-team .social").css("opacity") != 0){
+        pause();
+        alert("yes");
+      }
+      
+   }, 5000);
+
+$("#prev").css("display","none");
+
+
+
+function next_man(){
+   left = left - boxWidth;
+  $('.wrapper-it .container').animate({
+    'marginLeft': '-='+boxWidth+'px'
+  },500);
+   
+   leftPos = leftPos - boxWidth;
+  count++; 
+  
+  if(count<=0){
+  $("#prev").css("display","none");
+    
+    
+}
+else if(count>=f){
+  $("#next").css("display","none").css("margin-left","0");
+  $("#prev").css("display","block").css("margin-left","0");
+
+}
+else{
+  $("#prev").css("display","block").css("margin-left","0");
+  $("#next").css("display","block").css("margin-left","0px");
+ 
+}
+}
+
+
+function prev_man(){
+  left = - boxWidth;
+  $('.wrapper-it .container').animate({
+    'marginLeft': '-='+left+'px'
+  },500);
+  count--;
+  
+  leftPos = leftPos +boxWidth;
+
+  if(count<=0){
+  $("#prev").css("display","none");
+
+
+}
+else if(count>=f){
+  $("#next").css("display","none").css("margin-left","0");
+  $("#prev").css("display","block").css("margin-left","0vw");
+
+}
+else{
+  $("#prev").css("display","block").css("margin-left","0vw");
+  $("#next").css("display","block").css("margin-left","0");
+
+}
+}
+ $("#next").click(function(){
+
+  next_man();
+
+  
+
+
+ })
+  
+ $("#prev").click(function(){
+  
+prev_man();
+
+ })
+
+
+    
+     function pause() {
+        $('.wrapper-it .container').css("margin-left", leftPos +"px");
+        
+    };
+      
+    });
+  </script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+jQuery(document).ready(function ($){
+
+
+
+    
+   
+
+
+     var left;
+    
+    
+
+    $(".thebtn").hover(function(){
+      alert("yes");
+    })
+
+
+
+    
+
+});
+</script>
+
+
+
+<script type="text/javascript">
+
+
+
+
+jQuery(document).ready(function ($){
+
+    var leftPos =0; 
+    var slideCount = $('.events_gallery_1 ul li').length;
+    var slideWidth = $('.events_gallery_1 ul li').width();
+    var slideHeight = $('.events_gallery_1 ul li').height();
+    var sliderUlWidth = $('.events_gallery_1 ul').width();
+    var leftPos =0;
+    slideWidth = sliderUlWidth/slideCount ;
+    $("button.thebtn").click(function(){
+      alert(slideCount);
+      alert(slideHeight);
+    })
+
+    //$('.the-list').css({ width: sliderUlWidth, marginLeft: 0 });
+      $( ".active_events" ).hover(
+        function() {
+          $(".active_events").removeClass("events_gallery_1");
+          $(".active_events .ul").css("left",leftPos);
+        }, 
+        function() {
+          $(".active_events").addClass("events_gallery_1");
+        }
+    );
+
+      function moveRight() {
+        $('.events_gallery_1 ul').animate({
+            "marginLeft": "-="+slideWidth+"px"
+        }, 900, function () {
+           
+           
+        });
+        leftPos = leftPos+slideWidth;
+    };
+     function moveLeft() {
+        $('.events_gallery_1 ul').animate({
+            "marginLeft" : "0px"
+        }, 500, function () {
+            
+            
+        });
+        leftPos = 0;
+    };  
+
+
+    setInterval(function () {
+      moveRight();
+         if(leftPos >= (slideCount-3)*slideWidth){
+             moveLeft();
+          }
+
+    }, 2000);
+  });
+</script>
+
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function ($){
+
+   var itemHeight = $(".grid_commu_items").height();
+   var headHeight = $("section.communities_ieee span").height();
+   var mainHeight = (2*itemHeight) + headHeight + 20 + 450;
+    if(window.matchMedia('(max-width: 880px)').matches){
+   mainHeight = (4*itemHeight) + headHeight + 20 + 450;
+   }
+   
+
+   $("section.communities_ieee").css("height", (mainHeight +"px"));
+   $(".commu_container").css("height", (mainHeight +"px"));
+  
+
+
+})  
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function ($){
+
+   var itemHeight = $("header ul").height();
+   var notifyHeight = $("#notify").width();
+   itemHeight=  itemHeight + 20;
+   
+if(window.matchMedia('(min-width: 880px)').matches){
+   
+   
+   $("header img").css("height", (itemHeight*2 +"px"));
+   $("header img").css("margin-left", (15 +"px"));}
+else if(window.matchMedia('(max-width: 880px)').matches){
+
+  $('header ul').css("width", notifyHeight+40+"px");
+}
+  
+
+
+}) 
+</script>
+</html>
+    
+  </body>
+</html>
